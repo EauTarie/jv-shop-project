@@ -1,7 +1,7 @@
-<html>
-    <header>
         <section>
-            <a href="#"><img class="logo" src="../assets/logo_banner.png" alt="retrogame"></a>
+            <a href="#">
+                <img class="logo" src="../assets/logo_banner.png" alt="retrogame">
+            </a>
         </section>
         <section>
             <form action="post">
@@ -19,5 +19,3 @@
                 <a href="#"><img src="../assets/user_profile.png" alt="Compte utilisateur"></a>
             </div>
         </section>
-    </header>
-</html>

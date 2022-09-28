@@ -8,9 +8,11 @@
         <title>JV-SHOP</title>
     </head>
     <body class="index">
+        <header>
         <?php 
             include './php/header.php';
         ?>
+        </header>
         <nav>
             <ul>
                 <li><a href="#">jeux populaires</a></li>
@@ -78,8 +80,64 @@
             <aside>
                 <h1>derniers jeux sortis</h1>
                 <article>
-                    <img src="./assets/cartouche-gba.jpg" alt="">
+                    <div class="thumbnail">
+                        <img src="./assets/cartouche-gba.jpg" alt="cartouche-gba">
+                    </div>
+                    <div>
+                        <h1>
+                            <a href="#">
+                                zelda ocarina of time
+                            </a>
+                        </h1>
+                        <hr>
+                        <p class="price"><a href="#">
+                            à partir de :
+                            <?php
+                            ?>
+                        </a></p>
+                    </div>
+                </article>
+                <article>
+                    <div class="thumbnail">
+                        <img src="./assets/cartouche-gba.jpg" alt="cartouche-gba">
+                    </div>
+                    <div>
+                        <h1>
+                            <a href="#">
+                                zelda ocarina of time
+                            </a>
+                        </h1>
+                        <hr>
+                        <p class="price"><a href="#">
+                            à partir de :
+                            <?php
+                            ?>
+                        </a></p>
+                    </div>
+                </article>
+                <article>
+                    <div class="thumbnail">
+                        <img src="./assets/cartouche-gba.jpg" alt="cartouche-gba">
+                    </div>
+                    <div>
+                        <h1>
+                            <a href="#">
+                                zelda ocarina of time
+                            </a>
+                        </h1>
+                        <hr>
+                        <p class="price"><a href="#">
+                            à partir de :
+                            <?php
+                            ?>
+                        </a></p>
+                    </div>
                 </article>
         </main>
+        <footer>
+            <?php
+                include './php/footer.php';
+            ?>
+        </footer>
     </body>
 </html>

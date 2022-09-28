@@ -10,6 +10,8 @@ html, body, ul, li {
 header {
     background:rgba(245, 34, 92, 1);
     display:flex;
+    flex:1 2 1;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -22,13 +24,19 @@ header form input {
     background-position: right center;
     padding:20px 60px;
     border-radius: 25px;
-    color:#808080;
     font-size: 25px;
 }
 
+.index input::placeholder {
+    color:white;
+}
 section.right-side {
     display:flex;
     justify-content: space-evenly;
+}
+
+section.right-side div {
+    padding:30px;
 }
 
 section.right-side img {
@@ -95,4 +103,32 @@ div.big-wrapper {
 .index article a {
     text-decoration: none;
     color:black;
+}
+ 
+.index aside .thumbnail {
+    text-align: center;
+    padding:10px;
+}
+
+.index .price {
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+footer {
+    background:rgba(245, 34, 92, 1);
+}
+
+footer h2, footer p {
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+footer div.contact {
+    display:flex;
+}
+
+footer img {
+    height:250px;
 }
