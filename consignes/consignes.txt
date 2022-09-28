@@ -1,0 +1,36 @@
+ECF PHP :
+
+COULEUR PRINCIPALE :
+	- #F5225C : principal
+	- #D917FA : secondaire
+	- #16F5B2 : opposition
+POLICE ECRITURE :
+	- ARIAL
+
+PAGE :
+	-Home
+		-> Qui affichera les produits par date d'ajout
+	-Admin
+		-> Gérer et ajouter des produits
+	-Account
+		-> Qui affiche les commandes en cours, le solde bancaire, les informations utilisateurs
+	-Search
+		-> Qui permet de chercher les produits selon le nom
+
+
+ORDRE DE CREATION :
+	1. Maquette Front
+	2. Diagramme de Base de donnée
+	3. Base de donnée
+	4. Front
+	5. Back
+	6. Test
+	7. Déploiement
+
+
+__RENDU__ :
+	- 1 maquette Desktop & 1 maquette Mobile
+	- 1 Diagramme de base de donnée
+	- 1 fichier SQL contenant le schéma
+	- 1 repository GitHub contenant le projet
+	- 1 site déployé

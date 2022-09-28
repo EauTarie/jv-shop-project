@@ -1,0 +1,98 @@
+html, body, ul, li {
+    padding:0;
+    margin:0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background:rgba(245, 34, 92, 1);
+    display:flex;
+    align-items: center;
+}
+
+img.logo {
+    width:150px;
+}
+
+header form input {
+    background:url('../assets/loupe.svg') no-repeat;
+    background-position: right center;
+    padding:20px 60px;
+    border-radius: 25px;
+    color:#808080;
+    font-size: 25px;
+}
+
+section.right-side {
+    display:flex;
+    justify-content: space-evenly;
+}
+
+section.right-side img {
+    width:70px;
+}
+
+nav {
+    background:#DF7592;
+}
+
+nav ul li{
+    display:inline;
+}
+
+nav ul li a {
+    color:white;
+    font-size: 18px;
+    font-weight:700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+main {
+    background:rgba(128,128,128,0.2);
+    padding:20px 10px;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+main section h1, main aside h1 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+div.big-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 50px;
+    row-gap: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.index article {
+    border:solid black 3px;
+    border-radius: 15px;
+}
+
+.index img {
+    border-radius: 13px;
+}
+
+.index article h2 {
+    border-top:solid black 1px;
+    border-radius:15px;
+    padding-top:25px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.index article a {
+    text-decoration: none;
+    color:black;
+}
