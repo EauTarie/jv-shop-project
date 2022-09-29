@@ -5,6 +5,7 @@ html, body, ul, li {
 
 * {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -17,6 +18,11 @@ header {
 
 img.logo {
     width:150px;
+}
+
+header form {
+    background:#F97A9D;
+    border-radius: 30px;
 }
 
 header form input {
@@ -47,11 +53,21 @@ nav {
     background:#DF7592;
 }
 
+nav ul {
+    display:flex;
+    justify-content: space-evenly;
+    padding:5px;
+}
+
 nav ul li{
     display:inline;
+    border:white 1px solid;
+    border-radius: 10px;
 }
 
 nav ul li a {
+    padding:20px;
+    display:block;
     color:white;
     font-size: 18px;
     font-weight:700;
@@ -63,7 +79,8 @@ main {
     background:rgba(128,128,128,0.2);
     padding:20px 10px;
     display:grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 75% 15%;
+    column-gap: 60px;
 }
 
 main section h1, main aside h1 {
@@ -92,22 +109,53 @@ div.big-wrapper {
     border-radius: 13px;
 }
 
-.index article h2 {
+.index article a {
+    display:block;
     border-top:solid black 1px;
     border-radius:15px;
-    padding-top:25px;
+    padding:25px 0px;
     font-size: 24px;
     font-weight: 700;
-}
-
-.index article a {
     text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
     color:black;
 }
+
+.index a.none {
+    border: none;
+}
+.index article a.underline {
+    font-size: 17px;
+    text-decoration: underline;
+}
  
+.index article a.no-border {
+    border-top: none;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: lowercase;
+    text-decoration: none;
+}
+
+.index aside {
+    border-radius: 10px;
+    display:grid;
+    row-gap: 20px;
+    background: whitesmoke;
+    padding:0 20px 10px 20px;
+}
 .index aside .thumbnail {
     text-align: center;
     padding:10px;
+}
+
+.index .white-background {
+    background: white;
+}
+
+.index aside .thumbnail-small img {
+    height: 150px;
 }
 
 .index .price {
@@ -118,6 +166,8 @@ div.big-wrapper {
 
 footer {
     background:rgba(245, 34, 92, 1);
+    display:flex;
+    justify-content: space-between;
 }
 
 footer h2, footer p {
@@ -125,10 +175,126 @@ footer h2, footer p {
     text-decoration: underline;
 }
 
+footer .flex {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
 footer div.contact {
     display:flex;
+    justify-content: space-around;
 }
 
-footer img {
-    height:250px;
+footer img.macaron {
+    height:150px;
+}
+footer img:not(.macaron) {
+    height:25px;
+}
+
+footer .copyright {
+    background: #16F5B2;
+    display:flex;
+    align-items: center;
+    padding:10px;
+}
+
+/* PAGE ADMINISTRATEUR */
+
+.admin-title {
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.admin main {
+    display:block;
+    padding:50px;
+    padding-top: 25px;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 57px;
+    row-gap: 150px;
+    padding-top: 50px;
+}
+
+
+.admin div.wrapper {
+    background: rgba(255, 255, 0, 0.4);
+    text-align: center;
+}
+
+.admin div.wrapper a {
+    display:block;
+    border: 3px solid rgba(245, 34, 92, 0.6);
+    border-radius: 15px;
+    padding : 30px;
+    text-transform: uppercase;
+    color:black;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* PAGE ACCOUNT */
+
+.account h1 {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.account div.account-wrapper {
+    display:grid;
+    grid-template-columns: 15% 75%;
+}
+
+
+.account aside {
+    border:solid 3px black;
+    display:flex;
+    flex-direction: column;
+    padding: 0px;
+    row-gap: 0px;
+}
+
+.account aside div {
+    border-bottom:1px solid black;
+}
+
+.account aside div:last-child {
+    border:none;
+}
+
+.account aside div a {
+    text-transform: uppercase;
+    text-align: center;
+    display:    block;
+    color:  black;
+    font-size: 18px;
+    font-weight: 700;
+    padding:    10px 30px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+.account aside .red-background {
+    background: #F97A9D;
+}
+
+
+/* PAGE FORMULAIRE */
+
+form.form-user{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+button.submit-user {
+    grid-column: 1 / 3;
 }

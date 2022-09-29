@@ -10,12 +10,18 @@
         </section>
         <section class="right-side">
             <div>
-                <a href="#"><img src="../assets/speech-bubble.png" alt="Messagerie"></a>
+                <a href="#">
+                    <img src="../assets/speech-bubble.png" alt="Messagerie">
+                </a>
             </div>
             <div>
-                <a href="#"><img src="../assets/panier.png" alt="Panier de commande"></a>
+                <a href="#">
+                    <img src="../assets/panier.png" alt="Panier de commande">
+                </a>
             </div>
             <div>
-                <a href="#"><img src="../assets/user_profile.png" alt="Compte utilisateur"></a>
+                <a href="#">
+                    <img src="../assets/user_profile.png" alt="Compte utilisateur">
+                </a>
             </div>
         </section>

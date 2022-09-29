@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" 
+        content="Bienvenue sur notre boutique RETROGAME! 
+        Une boutique centrée sur le JEU VIDEO RETRO. 
+        Venez donc découvrir nos supers consoles retro ainsi que leurs jeux ! Nous avons une grande variété de produit">
+        <meta name="author" content="LOUBEAU Alexandre">
+        <meta name="keyword" content="HTML, CSS, JavaScript">
+        
+        <!-- A ENLEVER AVANT DE COMMENCER PHP -->
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <!-- A ENLEVER AVANT DE COMMENCER PHP -->
+
+        <meta name="keyword" content="HTML, CSS, JavaScript">
         <link rel="stylesheet" href="./css/style.css">
-        <title>JV-SHOP</title>
+        <link rel="icon" type="image/x-icon" href="/assets/logo_macaron.png">
+        <title>JV SHOP - Home</title>
     </head>
     <body class="index">
         <header>
@@ -15,12 +29,24 @@
         </header>
         <nav>
             <ul>
-                <li><a href="#">jeux populaires</a></li>
-                <li><a href="#">nes &#47; super nes</a></li>
-                <li><a href="#">medagrive</a></li>
-                <li><a href="#">ps1 &#47; ps2</a></li>
-                <li><a href="#">xbox</a></li>
-                <li><a href="#">autres</a></li>
+                <li>
+                    <a href="#">jeux populaires &#8595;</a>
+                </li>
+                <li>
+                    <a href="#">nes &#47; super nes &#8595;</a>
+                </li>
+                <li>
+                    <a href="#">medagrive &#8595;</a>
+                </li>
+                <li>
+                    <a href="#">ps1 &#47; ps2 &#8595;</a>
+                </li>
+                <li>
+                    <a href="#">xbox &#8595;</a>
+                </li>
+                <li>
+                    <a href="#">autres &#8595;</a>
+                </li>
             </ul>
         </nav>
         <main>
@@ -32,7 +58,7 @@
                             <a href="#"><img src="./assets/megadrive.jpg" alt="Megadrive"></a>
                         </div>
                         <div class="title">
-                            <a href="#"><h2>megadrive</h2></a>
+                            <a class="white-background" href="#">megadrive</a>
                         </div>
                     </article>
                     <article>
@@ -40,7 +66,7 @@
                             <a href="#"><img src="./assets/snes.jpg" alt="Super Nes"></a>
                         </div>
                         <div class="title">
-                            <a href="#"><h2>super nes</h2></a>
+                            <a class="white-background" href="#">super nes</a>
                         </div>
                     </article>
                     <article>
@@ -48,7 +74,7 @@
                             <a href="#"><img src="./assets/ps2.jpg" alt="PS2"></a>
                         </div>
                         <div class="title">
-                            <a href="#"><h2>PS2</h2></a>
+                            <a class="white-background" href="#">PS2</a>
                         </div>
                     </article>
                     <article>
@@ -56,7 +82,7 @@
                             <a href="#"><img src="./assets/gamecube-japonaise-orange.jpg" alt="gamecube"></a>
                         </div>
                         <div class="title">
-                            <a href="#"><h2>gamecube</h2></a>
+                            <a class="white-background" href="#">gamecube</a>
                         </div>
                     </article>
                     <article>
@@ -64,7 +90,7 @@
                             <a href="#"><img src="./assets/dreamcast-black-limited-ed-sans-boite.jpg" alt="dreamcast"></a>
                         </div>
                         <div class="title">
-                            <a href="#"><h2>dreamcast</h2></a>
+                            <a class="white-background" href="#">dreamcast</a>
                         </div>
                     </article>
                     <article>
@@ -72,7 +98,7 @@
                             <a href="#"><img src="./assets/nintendo64.jpg" alt="Nintendo 64"></a>
                         </div>
                         <div class="title">
-                            <a href="#"><h2>nintendo 64</h2></a>
+                            <a class="white-background" href="#">nintendo 64</a>
                         </div>
                     </article>
                 </div>
@@ -80,57 +106,55 @@
             <aside>
                 <h1>derniers jeux sortis</h1>
                 <article>
-                    <div class="thumbnail">
-                        <img src="./assets/cartouche-gba.jpg" alt="cartouche-gba">
+                    <div class="thumbnail-small">
+                        <a class="none" href="#">
+                            <img src="./assets/cartouche-gba.jpg" alt="cartouche-gba">
+                        </a>
                     </div>
                     <div>
-                        <h1>
-                            <a href="#">
+                            <a class="underline" href="#">
                                 zelda ocarina of time
                             </a>
-                        </h1>
                         <hr>
-                        <p class="price"><a href="#">
+                        <a class="no-border underline" href="#">
                             à partir de :
                             <?php
                             ?>
-                        </a></p>
+                            </a>
                     </div>
-                </article>
-                <article>
-                    <div class="thumbnail">
-                        <img src="./assets/cartouche-gba.jpg" alt="cartouche-gba">
+                </article>                <article>
+                    <div class="thumbnail-small">
+                        <a class="none" href="#">
+                            <img src="./assets/cartouche-gba.jpg" alt="cartouche-gba">
+                        </a>
                     </div>
                     <div>
-                        <h1>
-                            <a href="#">
+                            <a class="underline" href="#">
                                 zelda ocarina of time
                             </a>
-                        </h1>
                         <hr>
-                        <p class="price"><a href="#">
+                        <a class="no-border underline" href="#">
                             à partir de :
                             <?php
                             ?>
-                        </a></p>
+                            </a>
                     </div>
-                </article>
-                <article>
-                    <div class="thumbnail">
-                        <img src="./assets/cartouche-gba.jpg" alt="cartouche-gba">
+                </article>                <article>
+                    <div class="thumbnail-small">
+                        <a class="none" href="#">
+                            <img src="./assets/cartouche-gba.jpg" alt="cartouche-gba">
+                        </a>
                     </div>
                     <div>
-                        <h1>
-                            <a href="#">
+                            <a class="underline" href="#">
                                 zelda ocarina of time
                             </a>
-                        </h1>
                         <hr>
-                        <p class="price"><a href="#">
+                        <a class="no-border underline" href="#">
                             à partir de :
                             <?php
                             ?>
-                        </a></p>
+                            </a>
                     </div>
                 </article>
         </main>
