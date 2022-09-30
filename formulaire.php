@@ -27,42 +27,61 @@
             ?>
         </header>
 
-        <main>
+        <main class="form">
             <h1>informations personnelles</h1>
             <form class="form-user" action="/formulaire.php" method="post">
-                <div>
+                <div class="border-right">
                     <div>
-                        <label for="fname">nom</label>
-                        <input type="text" id="fname" value="">
+                        <label for="fname">nom</label><br>
+                        <input type="text" id="fname" value=""><hr class="form-hr">
                     </div>
                     <div>
-                        <label for="lname">prenom</label>
-                        <input type="text" id="lname" value="">
+                        <label for="lname">prenom</label><br>
+                        <input type="text" id="lname" value=""><hr class="form-hr">
                     </div>
                     <div>
-                        <label for="email">adresse email</label>
+                        <label for="email">adresse email</label><br>
                         <input type="email" id="email" value="">
                     </div>
                 </div>
-                <div>
+                <div class="margin-left">
                     <div>
-                        <label for="adress-postal">adresse postale</label>
-                        <input type="text" id="adress-postal" value="">
+                        <label for="adress-postal">adresse postale</label><br>
+                        <input type="text" id="adress-postal" value=""><hr class="form-hr">
                     </div>
                     <div>
-                        <label for="departement">département</label>
-                        <input type="number" id="departement" value="">
+                        <label for="departement">département</label><br>
+                        <input type="number" id="departement" value=""><hr class="form-hr">
                     </div>
                     <div>
-                        <label for="country">pays</label>
+                        <label for="country">pays</label><br>
                         <input type="text" id="country"value="">
                     </div>
                 </div>
                 <button class="submit-user" type="submit">Envoyer</button>
             </form>
             <h1>moyens de paiement</h1>
-            <button type="add-paiment">ajouter un moyen de paiement</button>
-            <img src="/assets/credit-card.svg" alt="logo carte">
+            <button class="add-button" type="add-paiment">ajouter un moyen de paiement</button>
+            <img class="icons" src="/assets/credit-card.svg" alt="logo carte">
+            <!-- METTRE LA BALISE PHP POUR LE BACK (TABLE) -->
+
+            <h1>adresse de livraison</h1>
+            <button class="add-button" type="add-adress">ajouter une adresse de livraison</button>
+            <div class="adress-wrapper">
+                <img class="truck" src="/assets/truck.svg" alt="camion">
+                <p>adresse de livraison</p>
+                <?php
+
+                ?>
+            </div>
+            <hr class="form-hr">
+            <div class="adress-wrapper">
+                <img class="truck" src="/assets/truck.svg" alt="camion">
+                <p>adresse de livraison</p>
+                <?php
+
+                ?>
+            </div>
         </main>
         <footer>
                 <?php
