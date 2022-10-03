@@ -1,6 +1,6 @@
 <?php
     $bdd = new PDO('mysql:host=localhost;dbname=bowser_shop;charset=utf8', 'root', '');
-    
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -13,7 +13,7 @@
         Une boutique centrée sur le JEU VIDEO RETRO. 
         Venez donc découvrir nos supers consoles retro ainsi que leurs jeux ! Nous avons une grande variété de produit">
         <meta name="author" content="LOUBEAU Alexandre">
-        <meta name="keyword" content="HTML, CSS, JavaScript">
+        <meta name="keyword" content="Video-game, Jeux-video, Retrogaming, Jeux anciens, Retrogame, Bowser_shop, Chartres, Boutique">
         
         <!-- LIGE 15 ET 16 A ENLEVER AVANT DE COMMENCER PHP -->
         <meta http-equiv="cache-control" content="no-cache" />

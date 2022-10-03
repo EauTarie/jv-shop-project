@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['user']))
+    {
+        header('Location:log-in.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -18,41 +25,22 @@
 
         <link rel="stylesheet" href="./css/style.css">
         <link rel="icon" type="image/x-icon" href="/assets/logo_macaron.png">
-        <title>JV SHOP - Admin</title>
+        <title>Landing - RETROGAME</title>
     </head>
-    <body class="index admin">
+    <body class="index admin log-in">
         <header>
             <?php
                 include './php/header.php';
             ?>
         </header>
         <main>
-            <h1 class="admin-title">menu administrateur</h1>
-            <section class="grid">
-                <div class="wrapper">
-                    <a href="#">gerer la boutique</a>
-                </div>
-                <div class="wrapper">
-                    <a href="#">ajouter des sellers</a>
-                </div>
-                <div class="wrapper">
-                    <a href="#">gerer les utilisateurs</a>
-                </div>
-                <div class="wrapper">
-                    <a href="#">gerer les moyens de paiements</a>
-                </div>
-                <div class="wrapper">
-                    <a href="#">ajouter ou retirer des privileges</a>
-                </div>
-                <div class="wrapper">
-                    <a href="#">gerer les paramètres système</a>
-                </div>
-            </section>
+            <h1>Bonjour ! <?php echo $_SESSION['user']; ?></h1>
+            <a href="deconnexion.php" class="submit-user">Déconnexion</a>
         </main>
         <footer class="desktop">
-            <?php
+                <?php
                     include './php/footer-desktop.php';
-            ?>
+                ?>
         </footer>
         <footer class="mobile">
                 <?php

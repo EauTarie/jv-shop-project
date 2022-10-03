@@ -9,7 +9,7 @@ CREATE TABLE moderators {
     last_name VARCHAR(20) NOT NULL,
     first_name VARCHAR(20) NOT NULL,
     age INT,
-    phone VARCHAR(15),
+    phone VARCHAR(15) NOT NULL,
     mail NVARCHAR(255) NOT NULL,
     pass NVARCHAR(255) NOT NULL,
 }

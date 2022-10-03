@@ -401,6 +401,31 @@ hr.form-hr {
     border-radius: 30px;
 }
 
+
+body.log-in main.log-in {
+    text-align: center;
+    padding:10px;
+}
+
+body.log-in main.log-in div {
+    background:#DF7592;
+    border:#16F5B2 3px solid;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+body.log-in main.log-in form {
+    display:flex;
+    flex-direction: column;
+}
+
+body.log-in main.log-in h2 {
+    color:white;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+
 @media (max-width: 1000px) {
     header section.right-side{
         display:none;
