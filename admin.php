@@ -49,10 +49,15 @@
                 </div>
             </section>
         </main>
-        <footer>
+        <footer class="desktop">
             <?php
-                include './php/footer.php';
+                    include './php/footer-desktop.php';
             ?>
+        </footer>
+        <footer class="mobile">
+                <?php
+                    include './php/footer-mobile.php'
+                    ?>
         </footer>
     </body>
 </html>
