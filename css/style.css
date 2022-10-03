@@ -406,6 +406,10 @@ hr.form-hr {
         display:none;
     }
 
+    nav {
+        display:none;
+    }
+
     main.form {
         max-width: 600px;
     }
@@ -439,5 +443,54 @@ hr.form-hr {
 
     footer.mobile p {
         text-decoration:none;
+    }
+
+    .index main {
+        display:flex;
+        flex-direction: column;
+    }
+
+    div.big-wrapper {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .index aside {
+        background: rgba(128,128,128,0);
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+    
+    .index aside h1 {
+        grid-column: 1/3;
+    }
+
+    .index aside article {
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+        margin:0 auto;
+    }
+
+    .index article a.no-border {
+        font-size: 22px;
+    }
+
+    .grid {
+        display:inline-flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin: 0 auto;
+        padding-top:15px;
+    }
+
+    .account div.account-wrapper {
+        display:block;
+    }
+
+    .account aside {
+        padding-top: 0px;
+    }
+
+    img.credit-card {
+        display:block;
     }
 }

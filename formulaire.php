@@ -1,3 +1,7 @@
+<?php
+    $bdd = new PDO('mysql:host=localhost;dbname=bowser_shop;charset=utf8', 'root', '');
+    
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -18,7 +22,7 @@
 
         <link rel="stylesheet" href="./css/style.css">
         <link rel="icon" type="image/x-icon" href="/assets/logo_macaron.png">
-        <title>JV SHOP - admin</title>
+        <title>JV SHOP - Formulaire</title>
     </head>
     <body class="index admin account">
         <header>
@@ -62,7 +66,7 @@
             </form>
             <h1>moyens de paiement</h1>
             <button class="add-button" type="add-paiment">ajouter un moyen de paiement</button>
-            <img class="icons" src="/assets/credit-card.svg" alt="logo carte">
+            <img class="icons credit-card" src="/assets/credit-card.svg" alt="logo carte">
             <!-- METTRE LA BALISE PHP POUR LE BACK (TABLE) -->
 
             <h1>adresse de livraison</h1>

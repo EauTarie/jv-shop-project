@@ -20,7 +20,7 @@
                 </a>
             </div>
             <div>
-                <a href="#">
+                <a href="formulaire.php">
                     <img src="../assets/user_profile.png" alt="Compte utilisateur">
                 </a>
             </div>
