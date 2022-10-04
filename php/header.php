@@ -10,12 +10,12 @@
         </section>
         <section class="right-side">
             <div>
-                <a href="#">
+                <a href="message.php">
                     <img src="../assets/speech-bubble.png" alt="Messagerie">
                 </a>
             </div>
             <div>
-                <a href="#">
+                <a href="shopping-cart.php">
                     <img src="../assets/panier.png" alt="Panier de commande">
                 </a>
             </div>
@@ -24,4 +24,8 @@
                     <img src="../assets/user_profile.png" alt="Compte utilisateur">
                 </a>
             </div>
+            <div>
+                <a href="connexion.php">
+                    <p>connexion</p>
+                </a>
         </section>

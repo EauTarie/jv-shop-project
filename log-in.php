@@ -63,8 +63,8 @@
             <div>
                 <form class="form" action="connexion.php" method="post">
                     <h2>Connexion</h2>
-                    <input type="email" id="email" placeholder="Email" required="required" autocomplete="off">
-                    <input type="password" id="password" placeholder="Mot de Passe" required="required" autocomplete="off">
+                    <input type="email" name="email" placeholder="Email" required="required" autocomplete="off">
+                    <input type="password" name="password" placeholder="Mot de Passe" required="required" autocomplete="off">
                     <button type="submit" class="btn">Connexion</button>
                 </form>
                 <p><a href="inscription.php">Inscription</a></p>
