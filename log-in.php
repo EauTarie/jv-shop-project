@@ -67,7 +67,7 @@
                     <input type="password" name="password" placeholder="Mot de Passe" required="required" autocomplete="off">
                     <button type="submit" class="btn">Connexion</button>
                 </form>
-                <p><a href="inscription.php">Inscription</a></p>
+                <p class="btn btn-reverse-color"><a href="inscription.php">Inscription</a></p>
             </div>
         </main>
         <footer class="desktop">

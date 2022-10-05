@@ -26,6 +26,6 @@
             </div>
             <div>
                 <a href="connexion.php">
-                    <p>connexion</p>
+                    <p class="btn">connexion</p>
                 </a>
         </section>

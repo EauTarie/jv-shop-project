@@ -37,7 +37,7 @@
                         case 'success':
                             ?>
                             <div class="alert alert-success">
-                                <strong>Succès</strong> inscription Réussie !
+                                <strong>Succès</strong> Inscription Réussie !
                             </div>
                             <?php
                             break;
@@ -84,7 +84,7 @@
                 }
             ?>
             <div>
-                <form action="inscription_traitement.php" method="post">
+                <form class="form" action="inscription_traitement.php" method="post">
                     <h2>Inscription</h2>
                     <input type="text" name="pseudo" placeholder="Pseudonyme" required="required" autocmplete="off">
                     <input type="email" name="email" placeholder="Email" required="required" autocomplete="off">
