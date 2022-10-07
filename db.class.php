@@ -26,9 +26,9 @@ class DB {
         }
     }
 
-    public function query($sql) {
+    public function query($sql, $data = array()) {
         $req = $this->db->prepare($sql);
-        $req->execute();
-        return $req->fetchAll();
+        $req->execute($data);
+        return $req->fetchAll(PDO::FETCH_OBJ);
     }
 }

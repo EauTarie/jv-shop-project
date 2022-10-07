@@ -1,6 +1,3 @@
-<?php
-require '_header.php';
-?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -25,34 +22,25 @@ require '_header.php';
     </head>
     <body class="index admin account product">
         <header>
-            <?php
-                include './php/header.php';
+            <?php 
+                require './php/header.php';
+                require 'db.class.php';
+                require 'panier.class.php'; 
+                var_dump($_SESSION);
             ?>
         </header>
-
         <main>
             <div class="wrapper">
-
-            <?php $products = $DB->query('SELECT * FROM products'); ?>
-            <?php foreach ($products as $product): ?>
-                <article class="product">
-                    <a href="#">
-                        <img src="/panier/<?php echo $product->id; ?>.jpg" alt="Miniature du produit">
-                    </a>
-                    <div class="info">
-                        <h1><?php echo $product->name; ?></h1>
-                        <a href="#" class="product-price"><?php echo number_format($product->price,2,","," ").' €'; ?></a>
-                    </div>
-                    <div class="panier">
-                        <a href="addpanier.php?id=<?php echo $product->id; ?>">ajouter au panier</a>
-                    </div>
-    
-                </article>
-
-            <?php endforeach ?>
-            
+                <?php 
+                $ids = array_keys($_SESSION['panier']);
+                unset($_SESSION['panier'][2]);
+                $products = $DB->query('SELECT * FROM products WHERE id IN ('.implode(',',$ids).')');
+                foreach($products as $product):
+                ?>
+                <?php endforeach ?>
             </div>
         </main>
+
         <footer class="desktop">
                 <?php
                     include './php/footer-desktop.php';
@@ -62,6 +50,3 @@ require '_header.php';
                 <?php
                     include './php/footer-mobile.php'
                     ?>
-        </footer>
-    </body>
-</html>
