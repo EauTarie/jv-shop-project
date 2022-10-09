@@ -1,3 +1,6 @@
+<?php
+require '_header.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -18,14 +21,12 @@
 
         <link rel="stylesheet" href="./css/style.css">
         <link rel="icon" type="image/x-icon" href="/assets/logo_macaron.png">
-        <title>JV SHOP - Formulaire</title>
+        <title>Panier - RETROGAME</title>
     </head>
     <body class="index admin account product">
         <header>
             <?php 
                 require './php/header.php';
-                require 'db.class.php';
-                require 'panier.class.php'; 
                 var_dump($_SESSION);
             ?>
         </header>
