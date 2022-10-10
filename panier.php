@@ -1,5 +1,5 @@
 <?php
-require '_header.php';
+    require '_header.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -27,18 +27,51 @@ require '_header.php';
         <header>
             <?php 
                 require './php/header.php';
-                var_dump($_SESSION);
             ?>
         </header>
         <main>
             <div class="wrapper">
-                <?php 
+                <?php
                 $ids = array_keys($_SESSION['panier']);
-                unset($_SESSION['panier'][2]);
-                $products = $DB->query('SELECT * FROM products WHERE id IN ('.implode(',',$ids).')');
+                if(empty($ids)) {
+                    $products = array();
+                } else {
+                    $products = $DB->query('SELECT * FROM products WHERE id IN ('.implode(',',$ids).')');
+                }
                 foreach($products as $product):
                 ?>
+                <article class="product">
+                    <a href="#" class="img">
+                        <img src="/panier/<?php echo $product->id; ?>.jpg">
+                    </a>
+                    <div class="info">
+                        <span class="name">
+                            <?php echo $product->name; ?>
+                        </span><br>
+                        <span class="price">
+                            Prix HTT : <?php echo number_format($product->price,2,","," ").' €'; ?>
+                        </span><br>
+                        <span class="quantity">
+                            Quantité : <?php echo $_SESSION['panier'][$product->id]; ?>
+                        </span><br>
+                        <span class="subtotal">
+                            Prix TTC : <?php echo number_format($product->price * 1.20,2,","," ").' €'; ?>
+                        </span><br>
+                        <span class="action">
+                            <a href="panier.php?delPanier=<?php echo $product->id; ?>" class="del">
+                                <img src="/assets/Delete.png" class="icon" alt="Bouton Supprimer">
+                            </a>
+                        </span><br>
+                    </div>
+                </article>
                 <?php endforeach ?>
+                <div class="rowtotal">
+                    <p>Prix total : 
+                        <span class="total">
+                            <?php echo number_format($panier->total(),2,',',' '); ?>€
+                        </span>
+                    </p>
+                </div>
             </div>
         </main>
 
@@ -50,4 +83,7 @@ require '_header.php';
         <footer class="mobile">
                 <?php
                     include './php/footer-mobile.php'
-                    ?>
+                ?>
+        </footer>
+    </body>
+</html>

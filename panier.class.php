@@ -1,19 +1,47 @@
 <?php
 class panier {
-    public function __construct() {
+    private $DB;
+
+    public function __construct($DB) {
         if(!isset($_SESSION)) {
             session_start();
         }
         if(!isset($_SESSION['panier'])) {
             $_SESSION['panier'] = array();
         }
+        $this->DB = $DB;
+        if(isset($_GET['delPanier'])) {
+            $this->del($_GET['delPanier']);
+        }
+    }
+
+    public function total() {
+        $total = 0;
+        $ids = array_keys($_SESSION['panier']);
+        if(empty($ids)) {
+            $products = array();
+        } else {
+            $products = $this->DB->query('SELECT id, price FROM products WHERE id IN ('.implode(',',$ids).')');
+        }
+        foreach ($products as $product) {
+            $total += $product->price * 1.20 * $_SESSION['panier'][$product->id];
+        }
+        return $total;
     }
 
     public function add($product_id) {
-        $_SESSION['panier'][$product_id] = 1;
+        if(isset($_SESSION['panier'][$product_id])){
+        $_SESSION['panier'][$product_id]++;
+        } else {
+            $_SESSION['panier'][$product_id] = 1;
+        }
     }
 
     public function del($product_id) {
+        if($_SESSION['panier'][$product_id] !=0 ) {
+            $_SESSION['panier'][$product_id]--;
+        } else {
         unset($_SESSION['panier'][$product_id]);
+        }
     }
 }

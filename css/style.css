@@ -458,6 +458,15 @@ body.log-in main.log-in h2 {
     text-decoration: underline;
 }
 
+a.del {
+    width:10%;
+    margin:20px 10px 0px auto;
+    border: black solid 3px;
+}
+
+img.icon {
+    width:50px;
+}
 
 @media (max-width: 1000px) {
     header section.right-side{

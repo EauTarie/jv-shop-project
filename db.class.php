@@ -31,4 +31,4 @@ class DB {
         $req->execute($data);
         return $req->fetchAll(PDO::FETCH_OBJ);
     }
-}
+};

@@ -1,5 +1,5 @@
         <section>
-            <a href="#">
+            <a href="index.php">
                 <img class="logo" src="../assets/logo_banner.png" alt="retrogame">
             </a>
         </section>
@@ -15,7 +15,7 @@
                 </a>
             </div>
             <div>
-                <a href="shopping-cart.php">
+                <a href="panier.php">
                     <img src="../assets/panier.png" alt="Panier de commande">
                 </a>
             </div>
