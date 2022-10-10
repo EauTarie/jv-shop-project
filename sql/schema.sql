@@ -1,3 +1,7 @@
+mysqldump -username root -p '' --databases bowser_shop > retrogame.sql
+
+mysqlimport -u root -p '' bowser_shop < bowser_shop.sql
+   
     DROP DATABASE IF EXISTS bowser_shop;
     CREATE DATABASE bowser_shop;
 
