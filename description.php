@@ -32,25 +32,27 @@ require '_header.php';
 
         <main>
             <div class="wrapper">
-
-            <?php $products = $DB->query('SELECT * FROM products'); ?>
-            <?php foreach ($products as $product): ?>
-                <article class="product">
-                    <a href="description.php?id=<?php echo $product->id; ?>">
-                        <img src="/panier/<?php echo $product->id; ?>.jpg" alt="Miniature du produit">
-                    </a>
-                    <div class="info">
-                        <h1><?php echo $product->name; ?></h1>
-                        <a href="description.php?id=<?php echo $product->id; ?>" class="product-price"><?php echo number_format($product->price,2,","," ").' €'; ?></a>
+                <section class="description">
+                <?php $products = $DB->query('SELECT * FROM products WHERE id=:id', array('id' => $_GET['id'])); ?>
+                <?php foreach ($products as $product): ?>
+                <div class="thumbnail">
+                    <img src="/panier/<?php echo $product->id; ?>.jpg" alt="Miniature de <?php echo $product->name ?>">
+                <div class="description-info">
+                    <div class="description-info-title">
+                        
                     </div>
-                    <div class="panier">
-                        <a href="addpanier.php?id=<?php echo $product->id; ?>">ajouter au panier</a>
+                    <div class="description-price">
+                        
                     </div>
-    
-                </article>
+                    <div class="descripion-add-shopping-cart">
+                        
+                    </div>
+                </div>
+                </section>
+                <section class="comments">
 
-            <?php endforeach ?>
-            
+                </section>
+                <?php endforeach ?>
             </div>
         </main>
         <footer class="desktop">

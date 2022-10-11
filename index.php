@@ -104,7 +104,7 @@
                 </div>
             </section>
             <aside>
-                <h1>derniers jeux sortis</h1>
+                <a href="shopping-cart.php"><h1>derniers jeux sortis</h1></a>
                 <article>
                     <div class="thumbnail-small">
                         <a class="none" href="#">
