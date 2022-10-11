@@ -33,7 +33,7 @@
                     <a href="#">gerer la boutique</a>
                 </div>
                 <div class="wrapper">
-                    <a href="#">ajouter des sellers</a>
+                    <a href="addseller.php">ajouter des sellers</a>
                 </div>
                 <div class="wrapper">
                     <a href="#">gerer les utilisateurs</a>

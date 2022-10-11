@@ -39,18 +39,22 @@ require '_header.php';
                     <img src="/panier/<?php echo $product->id; ?>.jpg" alt="Miniature de <?php echo $product->name ?>">
                 <div class="description-info">
                     <div class="description-info-title">
-                        
+                        <h1>
+                            <?php echo $product->name ?>
+                        </h1>
                     </div>
                     <div class="description-price">
-                        
+                        <h1>
+                            <?php echo $product->price ?>
+                        </h1>
                     </div>
                     <div class="descripion-add-shopping-cart">
-                        
+                        <a href="addpanier.php?id=<?php echo $product->id; ?>">ajouter au panier</a>
                     </div>
                 </div>
                 </section>
                 <section class="comments">
-
+                        
                 </section>
                 <?php endforeach ?>
             </div>
