@@ -33,37 +33,37 @@
                 <div class="border-right">
                     <div>
                         <label for="fname">nom</label><br>
-                        <input type="text" id="fname" value=""><hr class="form-hr">
+                        <input type="text" name="fname" id="fname" value="" required="required"><hr class="form-hr">
                     </div>
                     <div>
                         <label for="lname">prenom</label><br>
-                        <input type="text" id="lname" value=""><hr class="form-hr">
+                        <input type="text" name="lname" id="lname" value="" required="required"><hr class="form-hr">
                     </div>
                     <div>
                         <label for="email">adresse email</label><br>
-                        <input type="email" id="email" value=""><hr class="form-hr">
+                        <input type="email" name="email" id="email" value="" required="required"><hr class="form-hr">
                     </div>
                     <div>
                         <label for="password">mot de passe</label><br>
-                        <input type="password" id="password" value="">
+                        <input type="password" name="password" id="password" value="" required="required">
                     </div>
                 </div>
                 <div class="margin-left">
                     <div>
                         <label for="phone">numéro de téléphone</label><br>
-                        <input type="tel" id="phone" value=""><hr class="form-hr">
+                        <input type="tel" name="phone" id="phone" value="" required="required"><hr class="form-hr">
                     </div>
                     <div>
                         <label for="departement">département</label><br>
-                        <input type="text" id="departement" value=""><hr class="form-hr">
+                        <input type="text" name="departement" id="departement" value="" required="required"><hr class="form-hr">
                     </div>
                     <div>
                         <label for="adressPostal">adresse postale</label><br>
-                        <input type="text" id="adressPostal" value=""><hr class="form-hr">
+                        <input type="text" name="adressPostal" id="adressPostal" value="" required="required"><hr class="form-hr">
                     </div>
                     <div>
                         <label for="country">pays</label><br>
-                        <input type="text" id="country" value="">
+                        <input type="text" name="country" id="country" value="" required="required">
                     </div>
                 </div>
                 <button class="submit-user" type="submit">Envoyer</button>
