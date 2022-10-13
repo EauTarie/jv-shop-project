@@ -18,7 +18,7 @@
 
         <link rel="stylesheet" href="./css/style.css">
         <link rel="icon" type="image/x-icon" href="/assets/logo_macaron.png">
-        <title>Connexion CLIENT - Retrogame</title>
+        <title>Connexion ADMINISTRATEUR - Retrogame</title>
     </head>
     <body class="index admin log-in">
         <header>
@@ -61,14 +61,14 @@
                 }
             ?>
             <div>
-                <form class="form" action="connexion.php" method="post">
-                    <h2>Connexion CLIENT</h2>
+                <form class="form" action="connexion-admin.php" method="post">
+                    <h2>Connexion ADMINISTRATEUR</h2>
                     <input type="email" name="email" placeholder="Email" required="required" autocomplete="off">
                     <input type="password" name="password" placeholder="Mot de Passe" required="required" autocomplete="off">
                     <button type="submit" class="btn">Connexion</button>
                 </form>
                 <p class="btn btn-reverse-color"><a href="inscription.php">Inscription</a></p><hr class="form-hr">
-                <a class="return margin-top" href="admin_log-in.php">connexion en temps qu'administrateur</a><hr class="form-hr">
+                <a class="return margin-top" href="log-in.php">connexion en temps que client</a><hr class="form-hr">
                 <a class="return margin-top" href="seller_log-in.php">connexion en temps que vendeur</a>
             </div>
         </main>

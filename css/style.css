@@ -351,6 +351,40 @@ form.form-user hr.form-hr {
     margin-bottom: 20px;
 }
 
+hr.return-hr {
+    height:5px;
+    width:100%;
+    background:#16F5B2;
+    border:#16F5B2 1px solid;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+a.return {
+    align-self: flex-end;
+    width:30%;
+    margin:15px 10px;
+    padding:15px 0px;
+    background:#16F5B2;
+    border: white 3px solid;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight:700;
+    color: #F97A9D;
+    text-decoration: none;
+}
+
+a.return:active {
+    background:white;
+    border:#16F5B2 3px solid;
+}
+
+a.margin-top {
+    margin:10px 0px 10px auto;
+    display:block;
+}
+
 textarea {
     height:100px;
     border:#16F5B2 3px solid;

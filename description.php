@@ -21,7 +21,7 @@ require '_header.php';
 
         <link rel="stylesheet" href="./css/style.css">
         <link rel="icon" type="image/x-icon" href="/assets/logo_macaron.png">
-        <title>Achat - RETROGAME</title>
+        <title>Achat - Retrogame</title>
     </head>
     <body class="index admin account product">
         <header>

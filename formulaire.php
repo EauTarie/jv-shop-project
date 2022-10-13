@@ -22,7 +22,7 @@
 
         <link rel="stylesheet" href="./css/style.css">
         <link rel="icon" type="image/x-icon" href="/assets/logo_macaron.png">
-        <title>JV SHOP - Formulaire</title>
+        <title>Formulaire - Retrogame</title>
     </head>
     <body class="index admin account">
         <header>

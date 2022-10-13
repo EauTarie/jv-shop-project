@@ -18,7 +18,7 @@
 
         <link rel="stylesheet" href="./css/style.css">
         <link rel="icon" type="image/x-icon" href="/assets/logo_macaron.png">
-        <title>JV SHOP - Admin</title>
+        <title>Admin - Retrogame</title>
     </head>
     <body class="index admin">
         <header>

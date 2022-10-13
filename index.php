@@ -19,7 +19,7 @@
         <meta name="keyword" content="HTML, CSS, JavaScript">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="icon" type="image/x-icon" href="/assets/logo_macaron.png">
-        <title>JV SHOP - Home</title>
+        <title>Home - Retrogame</title>
     </head>
     <body class="index">
         <header>

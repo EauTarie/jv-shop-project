@@ -1,14 +1,18 @@
 <?php
 require_once 'config.php';
 
-if(!empty($_POST['product_name']) && !empty($_POST['product_price']) && !empty($_POST['product_seller_email'])) {
+if(!empty($_POST['product_name']) && !empty($_POST['product_price'])) {
     $productName=htmlspecialchars($_POST['product_name']);
     $productPrice=htmlspecialchars($_POST['product_price']);
-    $productSellerEmail=htmlspecialchars($_POST['product_seller_email']);
     $productInfo=htmlspecialchars($_POST['product_description']);
-    if(empty($productInfo)) {
-        $check = $bdd->prepare('SELECT email FROM ') // A FINIR TOUT A L'HEURE
-    }
+    
+    $insert = $bdd->prepare('INSERT INTO products (title, price, comments) VALUES(:title, :price, :comments)');
+    $insert->execute(array(
+        'title' => $productName,
+        'price' => $productPrice,
+        'comments' => $productInfo
+    ));
+    die('Le produit a bien été ajouté. <a href="javascript:history.back()"> Retourner sur le formulaire</a>.');
 } else {
     header('Location: addseller.php?reg_err=product_field_required');
 }
