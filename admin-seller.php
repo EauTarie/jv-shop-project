@@ -1,7 +1,6 @@
 <?php
 require_once 'config.php';
 
-echo $_POST['fname']. '<br>'. $_POST['lname']. '<br>'. $_POST['email']. '<br>'. $_POST['password']. '<br>'.$_POST['phone'] . '<br>'.$_POST['departement'] . '<br>' . $_POST['adressPostal'] . '<br>'. $_POST['country']; //TEST A DELETE//
 if(!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['phone']) && !empty($_POST['departement']) && !empty($_POST['adressPostal']) && !empty($_POST['country'])) {
     $fName=htmlspecialchars($_POST['fname']);
     $lName=htmlspecialchars($_POST['lname']);

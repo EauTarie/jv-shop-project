@@ -68,6 +68,24 @@
                 </div>
                 <button class="submit-user" type="submit">Envoyer</button>
             </form>
+            <h1>
+                Ajouter un produit
+            </h1>
+            <form class="form-user" action="add-product.php" method="post">
+                <div class="border-right">
+                    <label for="product_name">Nom</label><br>
+                    <input type="text" name="product_name" id="product_name" value="" required="required"><hr class="form-hr">
+                    <label for="product_price">Prix</label><br>
+                    <input type="number" name="product_price" id="product_price" value="" required="required" placeholder="€">
+                </div>
+                <div class="margin-left">
+                    <label for="product_seller">email du vendeur</label><br>
+                    <input type="email" name="product_seller_email" id="product_seller" value="" required="required"><hr class="form-hr">
+                    <label for="product_description">description</label><br>
+                    <textarea class="borders" type="text" cols="40" row="5" name="product_description" id="product_description" value="" placeholder="Tapez une description courte de votre produit ici"></textarea>
+                </div>
+                <button class="submit-user" type="submit">Envoyer</button>
+            </form>
         </main>
         <footer class="desktop">
             <?php

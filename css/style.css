@@ -306,6 +306,7 @@ main.form {
     flex-direction: column;
     margin: 80px auto;
     padding: 0px;
+    padding-bottom:10px;
     text-align: center;
 }
 
@@ -350,6 +351,12 @@ form.form-user hr.form-hr {
     margin-bottom: 20px;
 }
 
+textarea {
+    height:100px;
+    border:#16F5B2 3px solid;
+    border-radius: 10px;
+    padding:10px;
+}
 
 .log-in .form input::placeholder {
     color:black;
