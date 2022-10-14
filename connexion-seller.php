@@ -9,7 +9,7 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
     $password=htmlspecialchars($_POST['password']);
 
     $email = strtolower($email);
-    $check=$bdd->prepare('SELECT pseudo, email, password FROM vendeurs WHERE email = ?');
+    $check=$bdd->prepare('SELECT email, pass FROM vendeurs WHERE email = ?');
     $check->execute(array($email));
     $data = $check->fetch();
     $row = $check->rowCount();
@@ -20,10 +20,10 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
         {
             $password =hash('sha256', $password);
 
-            if($data['password'] === $password)
+            if($data['pass'] === $password)
             {
-                $_SESSION['user'] = $data['pseudo'];
-                header('Location: landing.php');
+                $_SESSION['user'] = $data['email'];
+                header('Location: landingseller.php');
             } else header('Location: seller_log-in.php?login_err=password');
         } else header('Location: seller_log-in.php?login_err=email');
     } else header('Location: seller_log-in.php?login_err=already');

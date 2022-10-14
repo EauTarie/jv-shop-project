@@ -19,10 +19,10 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
         if((filter_var($email, FILTER_VALIDATE_EMAIL)))
         {
 
-            if($data['password'] == $password) //CONDITION QUI NE FONCTIONNE PAS, A VOIR EN RENTRANT //
+            if($data['pass'] == $password)
             {
                 $_SESSION['user'] = $data['pseudo'];
-                header('Location: landing.php');
+                header('Location: landingadmin.php');
             } else header('Location: admin_log-in.php?login_err=password');
         } else header('Location: admin_log-in.php?login_err=email');
     } else header('Location: admin_log-in.php?login_err=already');

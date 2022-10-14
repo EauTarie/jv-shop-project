@@ -2,7 +2,7 @@
     session_start();
     if(!isset($_SESSION['user']))
     {
-        header('Location:log-in.php');
+        header('Location:admin_log-in.php');
     }
 ?>
 <!DOCTYPE html>
@@ -25,7 +25,7 @@
 
         <link rel="stylesheet" href="./css/style.css">
         <link rel="icon" type="image/x-icon" href="/assets/logo_macaron.png">
-        <title>Landing client - RETROGAME</title>
+        <title>Landing administrateur - RETROGAME</title>
     </head>
     <body class="index admin log-in">
         <header>
@@ -34,7 +34,7 @@
             ?>
         </header>
         <main>
-            <h1>Bonjour ! <?php echo $_SESSION['user']; ?></h1>
+            <h1>Bonjour ! <?php echo $_SESSION['user']; ?> (Administrateur)</h1>
             <a href="deconnexion.php" class="submit-user">Déconnexion</a>
         </main>
         <footer class="desktop">

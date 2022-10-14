@@ -11,7 +11,7 @@ if(!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['email'])
     $adressPostal=htmlspecialchars($_POST['adressPostal']);
     $country=htmlspecialchars($_POST['country']);
 
-    $check = $bdd->prepare('SELECT first_name, last_name, email, password FROM vendeurs WHERE email = ?');
+    $check = $bdd->prepare('SELECT first_name, last_name, email, pass FROM vendeurs WHERE email = ?');
     $check->execute(array($email));
     $data = $check->fetch();
     $row = $check->rowCount();
@@ -28,10 +28,11 @@ if(!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['email'])
                 {
                     if(filter_var($email, FILTER_VALIDATE_EMAIL))
                     {
-                        // Non insertion des données sur PHP my ADMIN, regarder plus tard //
                         $password = hash('sha256', $password);
                         $ip = $_SERVER['REMOTE_ADDR'];
-                        $insert = $bdd->prepare('INSERT INTO vendeurs (first_name, last_name, pass, tel_number, email, departement, adress_postal, country) VALUES (:fname, :lname, :pass, :phone, :email, :departement, :adresspostal, :country)');
+                        $insert = $bdd->prepare(
+                            'INSERT INTO vendeurs (first_name, last_name, pass, tel_number, email, departement, adress_postal, country)
+                             VALUES (:fname, :lname, :pass, :phone, :email, :departement, :adresspostal, :country)');
                         $insert->execute(array(
                             'fname' => $fName,
                             'lname' => $lName,
