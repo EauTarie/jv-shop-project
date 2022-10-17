@@ -18,7 +18,7 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
     {
         if((filter_var($email, FILTER_VALIDATE_EMAIL)))
         {
-
+            // $password =password_hash( $password,PASSWORD_DEFAULT); A VOIR LA DOCUMENTATION PHP : https://www.php.net/manual/en/function.password-hash.php //
             if($data['pass'] == $password)
             {
                 $_SESSION['user'] = $data['pseudo'];
