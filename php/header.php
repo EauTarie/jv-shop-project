@@ -5,7 +5,7 @@
         </section>
         <section>
             <form action="post">
-                <input type="search" placeholder="Rechercher...">
+                <input class="search" type="search" placeholder="Rechercher un titre, une description...">
             </form>
         </section>
         <section class="right-side">

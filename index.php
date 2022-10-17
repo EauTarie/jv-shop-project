@@ -122,7 +122,8 @@
                             ?>
                             </a>
                     </div>
-                </article>                <article>
+                </article>
+                <article>
                     <div class="thumbnail-small">
                         <a class="none" href="#">
                             <img src="./assets/cartouche-gba.jpg" alt="cartouche-gba">
@@ -139,7 +140,8 @@
                             ?>
                             </a>
                     </div>
-                </article>                <article>
+                </article>
+                <article>
                     <div class="thumbnail-small">
                         <a class="none" href="#">
                             <img src="./assets/cartouche-gba.jpg" alt="cartouche-gba">
