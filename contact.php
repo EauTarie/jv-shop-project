@@ -33,11 +33,11 @@
 
         <main class="form">
             <h1>informations personnelles</h1>
-            <form class="form-user" action="contact_traitement.php" method="post">
+            <form class="form-user" action="contact-traitement.php" method="post">
                 <div class="border-right">
                     <div>
-                        <label for="nickname">pseudonyme</label><br>
-                        <input type="text" id="nickname" name="nickname" value=""><hr class="form-hr">
+                        <label for="pseudo">pseudonyme</label><br>
+                        <input type="text" id="pseudo" name="pseudo" value=""><hr class="form-hr">
                     </div>
                     <div>
                         <label for="email">adresse email</label><br>
@@ -46,10 +46,11 @@
                 </div>
                 <div class="margin-left">
                     <label for="message">Message</label><br>
-                    <textarea class="borders" type="text" cols="40" row="5" name="message" id="message" value="" placeholder="Tapez votre message ici"></textarea>
+                    <textarea class="borders" type="text" cols="40" row="5" name="message" id="message" value="" placeholder="Tapez votre message ici" required="required"></textarea>
                 </div>
                 <button class="submit-user" type="submit">Envoyer</button>
             </form>
+            <a class="return margin-top" href="comments.php">Voir les derniers commentaires</a>
         </main>
         <footer class="desktop">
                 <?php
@@ -58,7 +59,7 @@
         </footer>
         <footer class="mobile">
                 <?php
-                    include './php/footer-mobile.php'
+                    include './php/footer-mobile.php';
                     ?>
         </footer>
     </body>

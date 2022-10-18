@@ -43,12 +43,12 @@ if(!empty($_POST['fname']) && !empty($_POST['lname']) && !empty($_POST['email'])
                             'adresspostal' => $adressPostal,
                             'country' => $country
                         ));
-                        die('Le produit a bien été ajouté. <a href="javascript:history.back()"> Retourner sur le formulaire</a>.');
-                    } else {header('Location: inscription.php?reg_err=email');die();}
-                } else { header('Location: inscription.php?reg_err=email_length');die(); }
-            } else { header('Location: inscription.php?reg_err=lName_length');die(); }
-        } else { header('Location: inscription.php?reg_err=fName_length');die(); }
-    } else { header('Location: inscription.php?reg_erro=already');die(); }
+                        die('Le vendeur a bien été ajouté. <a href="javascript:history.back()"> Retourner sur le formulaire</a>.');
+                    } else {header('Location: addseller.php?reg_err=email');die();}
+                } else { header('Location: addseller.php?reg_err=email_length');die(); }
+            } else { header('Location: addseller.php?reg_err=lName_length');die(); }
+        } else { header('Location: addseller.php?reg_err=fName_length');die(); }
+    } else { header('Location: addseller.php?reg_erro=already');die(); }
  } else {
     header('Location: addseller.php?reg_err=field_required');
  }

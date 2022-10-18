@@ -10,7 +10,7 @@
         </section>
         <section class="right-side">
             <div>
-                <a href="message.php">
+                <a href="contact.php">
                     <img src="../assets/speech-bubble.png" alt="Messagerie">
                 </a>
             </div>
