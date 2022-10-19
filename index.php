@@ -55,56 +55,70 @@
                 <div class="big-wrapper">
                     <article>
                         <div class="thumbnail">
-                            <a href="#"><img src="./assets/megadrive.jpg" alt="Megadrive"></a>
+                            <a href="#" class="no-border">
+                                <img src="./assets/megadrive.jpg" alt="Megadrive">
+                            </a>
                         </div>
                         <div class="title">
-                            <a class="white-background" href="#">megadrive</a>
+                            <a class="white-background no-border-top no-radius-top" href="#">megadrive</a>
                         </div>
                     </article>
                     <article>
                         <div class="thumbnail">
-                            <a href="#"><img src="./assets/snes.jpg" alt="Super Nes"></a>
+                            <a href="#" class="no-border">
+                                <img src="./assets/snes.jpg" alt="Super Nes">
+                            </a>
                         </div>
                         <div class="title">
-                            <a class="white-background" href="#">super nes</a>
+                            <a class="white-background no-border-top no-radius-top" href="#">super nes</a>
                         </div>
                     </article>
                     <article>
                         <div class="thumbnail">
-                            <a href="#"><img src="./assets/ps2.jpg" alt="PS2"></a>
+                            <a href="#" class="no-border">
+                                <img src="./assets/ps2.jpg" alt="PS2">
+                            </a>
                         </div>
                         <div class="title">
-                            <a class="white-background" href="#">PS2</a>
+                            <a class="white-background no-border-top no-radius-top" href="#">PS2</a>
                         </div>
                     </article>
                     <article>
                         <div class="thumbnail">
-                            <a href="#"><img src="./assets/gamecube-japonaise-orange.jpg" alt="gamecube"></a>
+                            <a href="#" class="no-border">
+                                <img src="./assets/gamecube-japonaise-orange.jpg" alt="gamecube">
+                            </a>
                         </div>
                         <div class="title">
-                            <a class="white-background" href="#">gamecube</a>
+                            <a class="white-background no-border-top no-radius-top" href="#">gamecube</a>
                         </div>
                     </article>
                     <article>
                         <div class="thumbnail">
-                            <a href="#"><img src="./assets/dreamcast-black-limited-ed-sans-boite.jpg" alt="dreamcast"></a>
+                            <a href="#" class="no-border">
+                                <img src="./assets/dreamcast-black-limited-ed-sans-boite.jpg" alt="dreamcast">
+                            </a>
                         </div>
                         <div class="title">
-                            <a class="white-background" href="#">dreamcast</a>
+                            <a class="white-background no-border-top no-radius-top" href="#">dreamcast</a>
                         </div>
                     </article>
                     <article>
                         <div class="thumbnail">
-                            <a href="#"><img src="./assets/nintendo64.jpg" alt="Nintendo 64"></a>
+                            <a href="#" class="no-border">
+                                <img src="./assets/nintendo64.jpg" alt="Nintendo 64">
+                            </a>
                         </div>
                         <div class="title">
-                            <a class="white-background" href="#">nintendo 64</a>
+                            <a class="white-background no-border-top no-radius-top" href="#">nintendo 64</a>
                         </div>
                     </article>
                 </div>
             </section>
             <aside>
-                <a href="shopping-cart.php"><h1>derniers jeux sortis</h1></a>
+                <a href="shopping-cart.php">
+                    <h1>derniers jeux sortis</h1>
+                </a>
                 <article>
                     <div class="thumbnail-small">
                         <a class="none" href="#">

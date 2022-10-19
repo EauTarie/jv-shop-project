@@ -9,7 +9,7 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
     $password=htmlspecialchars($_POST['password']);
 
     $email = strtolower($email);
-    $check=$bdd->prepare('SELECT pseudo, mail, pass FROM moderators WHERE mail = ?');
+    $check=$bdd->prepare('SELECT pseudo, mail, pass, privilege FROM moderators WHERE mail = ?');
     $check->execute(array($email));
     $data = $check->fetch();
     $row = $check->rowCount();
@@ -19,11 +19,10 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
         if((filter_var($email, FILTER_VALIDATE_EMAIL)))
         {
             $password =md5($password);
-            echo $password. '<br>';
-            echo $data['pass']. '<br>';
             if($data['pass'] == $password)
             {
                 $_SESSION['user'] = $data['pseudo'];
+                $_SESSION['privilege'] = $data['privilege'];
                 header('Location: landingadmin.php');
             } else header('Location: admin_log-in.php?login_err=password');
         } else header('Location: admin_log-in.php?login_err=email');

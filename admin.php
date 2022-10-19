@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if($_SESSION['privilege'] !="Administrateur") {
+        header('Location: admin_log-in.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="fr">
     <head>

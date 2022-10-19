@@ -27,15 +27,16 @@
         <link rel="icon" type="image/x-icon" href="/assets/logo_macaron.png">
         <title>Landing administrateur - RETROGAME</title>
     </head>
-    <body class="index admin log-in">
+    <body class="index admin log-in landing">
         <header>
             <?php
                 include './php/header.php';
             ?>
         </header>
-        <main>
-            <h1>Bonjour ! <?php echo $_SESSION['user']; ?> (Administrateur)</h1>
-            <a href="deconnexion.php" class="submit-user">Déconnexion</a>
+        <main class="form">
+            <h1 class="margin-bottom">Bonjour <?php echo $_SESSION['user']; ?> ! (role : Administrateur)</h1>
+            <a href="deconnexion.php" class="submit-user btn reverse">Déconnexion</a>
+            <a href="admin.php" class="btn reverse">Page administrateur</a>
         </main>
         <footer class="desktop">
                 <?php

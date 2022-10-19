@@ -27,15 +27,16 @@
         <link rel="icon" type="image/x-icon" href="/assets/logo_macaron.png">
         <title>Landing client - RETROGAME</title>
     </head>
-    <body class="index admin log-in">
+    <body class="index admin log-in landing">
         <header>
             <?php
                 include './php/header.php';
             ?>
         </header>
-        <main>
-            <h1>Bonjour ! <?php echo $_SESSION['user']; ?></h1>
-            <a href="deconnexion.php" class="submit-user">Déconnexion</a>
+        <main class="form">
+            <h1>Bonjour <?php echo $_SESSION['user']; ?>!</h1>
+            <a href="deconnexion.php" class="submit-user reverse btn">Déconnexion</a>
+            <a href="shopping-cart.php" class="reverse btn">Acceder à la liste des articles</a>
         </main>
         <footer class="desktop">
                 <?php

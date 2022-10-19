@@ -46,7 +46,7 @@
                     </a>
                     <div class="info">
                         <span class="name">
-                            <?php echo $product->name; ?>
+                            <?php echo $product->title; ?>
                         </span><br>
                         <span class="price">
                             Prix HTT : <?php echo number_format($product->price,2,","," ").' €'; ?>
