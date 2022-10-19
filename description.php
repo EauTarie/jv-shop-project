@@ -36,11 +36,11 @@ require '_header.php';
                 <?php $products = $DB->query('SELECT * FROM products WHERE id=:id', array('id' => $_GET['id'])); ?>
                 <?php foreach ($products as $product): ?>
                 <div class="thumbnail">
-                    <img src="/panier/<?php echo $product->id; ?>.jpg" alt="Miniature de <?php echo $product->name ?>">
+                    <img src="/panier/<?php echo $product->id; ?>.jpg" alt="Miniature de <?php echo $product->title ?>">
                 <div class="description-info">
                     <div class="description-info-title">
                         <h1>
-                            <?php echo $product->name ?>
+                            <?php echo $product->title ?>
                         </h1>
                     </div>
                     <div class="description-price">
