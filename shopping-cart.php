@@ -23,26 +23,24 @@ require '_header.php';
         <link rel="icon" type="image/x-icon" href="/assets/logo_macaron.png">
         <title>Panier d'Achat - Retrogame</title>
     </head>
-    <body class="index admin account product">
+    <body class="index admin account product shopping">
         <header>
             <?php
                 include './php/header.php';
             ?>
         </header>
 
-        <main>
-            <div class="wrapper">
-
+        <main class="form">
             <?php $products = $DB->query('SELECT * FROM products'); ?>
             <?php foreach ($products as $product): ?>
                 <article class="product">
+                    <div class="info">
+                        <h1 class="border-bottom"><?php echo $product->title; ?></h1>
+                    </div>
                     <a href="description.php?id=<?php echo $product->id; ?>">
                         <img src="/panier/<?php echo $product->id; ?>.jpg" alt="Miniature du produit">
                     </a>
-                    <div class="info">
-                        <h1><?php echo $product->title; ?></h1>
-                        <a href="description.php?id=<?php echo $product->id; ?>" class="product-price"><?php echo number_format($product->price,2,","," ").' €'; ?></a>
-                    </div>
+                    <a href="description.php?id=<?php echo $product->id; ?>" class="product-price"><?php echo number_format($product->price,2,","," ").' €'; ?></a>
                     <div class="panier">
                         <a href="addpanier.php?id=<?php echo $product->id; ?>">ajouter au panier</a>
                     </div>
@@ -51,7 +49,6 @@ require '_header.php';
 
             <?php endforeach ?>
             
-            </div>
         </main>
         <footer class="desktop">
                 <?php
