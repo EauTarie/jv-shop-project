@@ -507,7 +507,7 @@ textarea {
     color:black;
 }
 
-.account input {
+.account form input:not(.search) {
     background-color: lightcyan;
     padding: 5px;
     border:none;
