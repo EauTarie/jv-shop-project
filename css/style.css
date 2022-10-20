@@ -474,6 +474,23 @@ a.return:active {
     border:#16F5B2 3px solid;
 }
 
+a.bigger {
+    min-width: 50%;
+    background:palevioletred;
+    border:#16F5B2 3px;
+    border-radius:10px;
+    color:#16F5B2;
+}
+
+a.bigger:hover {
+    background:#16F5B2;
+    color:#F97A9D;
+}
+
+a.bigger:active {
+    border:none;
+}
+
 a.margin-top {
     margin:10px 0px 10px auto;
     display:block;
@@ -488,6 +505,17 @@ textarea {
 
 .log-in .form input::placeholder {
     color:black;
+}
+
+.account input {
+    background-color: lightcyan;
+    padding: 5px;
+    border:none;
+    border-radius: 10px;
+    text-align: center;
+    color: #DF7592;
+    font-weight: 700;
+    font-size: 15px;
 }
 
 .btn {
@@ -525,17 +553,18 @@ button.submit-user {
     text-transform: uppercase;
 }
 
-button.add-button {
+a.add-button {
     align-self: end;
     margin-right: 20px;
-    padding: 20px 10px;
+    padding: 10px 10px;
     border: white 2px solid;
-    border-radius: 10px;
+    border-radius: 150px;
     background: #16F5B2;
     color:#F97A9D;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .icons {
@@ -546,8 +575,8 @@ button.add-button {
 
 div.adress-wrapper {
     display:flex;
-    flex-direction: column;
-    margin-left: 20px;
+    justify-content: space-around;
+    margin-bottom: 10px;
 }
 
 .truck {
@@ -563,6 +592,20 @@ div.adress-wrapper p {
 
 div.delivery {
     display:flex;
+    align-items: center;
+}
+
+div.delivery p {
+    margin-bottom:0px;
+    margin-top: 0px;
+}
+
+p.contact-information {
+    background: lightcyan;
+    border-radius: 50px;
+    width:50%;
+    padding:10px;
+    color:#DF7592;
 }
 
 hr.form-hr {

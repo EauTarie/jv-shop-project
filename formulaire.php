@@ -80,31 +80,23 @@
                 <button class="submit-user" type="submit">Envoyer</button>
             </form>
             <h1>moyens de paiement</h1>
-            <button class="add-button" type="add-paiment">ajouter un moyen de paiement</button>
+            <a href="#" class="add-button" type="add-paiment">ajouter un moyen de paiement</a>
             <img class="icons credit-card" src="/assets/credit-card.svg" alt="logo carte">
             <!-- METTRE LA BALISE PHP POUR LE BACK (TABLE) -->
 
             <h1>adresse de livraison</h1>
-            <button class="add-button" type="add-adress">ajouter une adresse de livraison</button>
             <div class="adress-wrapper">
                 <div class="delivery">
                     <img class="truck" src="/assets/truck.svg" alt="camion">
                     <p>adresse de livraison</p>
                 </div>
-                <div>
-                    <?php
-                        echo "<p>" . $data['adress']. " " . $data['departement']. " " . $data['country']. "</p>";
-                    ?>
-                </div>
-            </div>
-            <hr class="form-hr">
-            <div class="adress-wrapper">
-                <img class="truck" src="/assets/truck.svg" alt="camion">
-                <p>adresse de livraison</p>
                 <?php
-
-                ?>
+                        echo "<p class=\"contact-information\">" . $data['adress']. " " . $data['departement']. " " . $data['country']. "</p>";
+                        ?>
             </div>
+            <a href="#" class="add-button" type="add-adress">ajouter une adresse de livraison</a>
+            <hr class="form-hr">
+            <a class="return bigger" href="delete-account.php">Supprimer le compte</a>
         </main>
         <footer class="desktop">
                 <?php
@@ -114,7 +106,7 @@
         <footer class="mobile">
                 <?php
                     include './php/footer-mobile.php'
-                    ?>
+                ?>
         </footer>
     </body>
 </html>
