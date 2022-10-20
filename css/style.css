@@ -406,7 +406,7 @@ main.form {
 
 main.form h1 {
     color:#16F5B2;
-    font-size: 20px;
+    font-size: 18px;
     padding: 25px;
     border-bottom: #16F5B2 2px dashed;
     border-top: #16F5B2 2px dashed;
@@ -585,7 +585,7 @@ div.adress-wrapper {
 }
 
 div.adress-wrapper p {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
 }
