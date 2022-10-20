@@ -1,5 +1,5 @@
 <section>
-    <a href="#">
+    <a href="../shopping-cart.php">
         <img src="../assets/manette.png" alt="Catégorie Jeux">
         <p>
             jeux
@@ -7,7 +7,7 @@
     </a>
 </section>
 <section>
-    <a href="#">
+    <a href="../panier.php">
         <img src="../assets/panier.png" alt="Catégorie Panier">
         <p>
             panier
@@ -23,7 +23,7 @@
     </a>
 </section>
 <section>
-    <a href="#">
+    <a href="../contact.php">
         <img src="../assets/speech-bubble.png" alt="Messagerie Instantanée">
         <p>
             messagerie
@@ -31,7 +31,7 @@
     </a>
 </section>
 <section>
-    <a href="#">
+    <a href="../formulaire.php">
         <img src="../assets/user_profile.png" alt="Compte Utilisateur">
         <p>
             utilisateur

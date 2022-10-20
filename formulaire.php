@@ -1,6 +1,11 @@
 <?php
-    $bdd = new PDO('mysql:host=localhost;dbname=bowser_shop;charset=utf8', 'root', '');
-
+    require_once 'config.php';
+    session_start();
+    if(!isset($_SESSION['user'])) {
+        header('Location:log-in.php');
+    }
+    echo $_SESSION['user']; // A SUPPRIMER APRES TEST
+    echo $_SESSION['email']; // A SUPPRIMER APRES TEST
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,8 +21,8 @@
         <meta name="keyword" content="Video-game, Jeux-video, Retrogaming, Jeux anciens, Retrogame, Bowser_shop, Chartres, Boutique">
         
         <!-- LIGE 15 ET 16 A ENLEVER AVANT DE COMMENCER PHP -->
-        <meta http-equiv="cache-control" content="no-cache" />
-        <meta http-equiv="pragma" content="no-cache" />
+        <!-- <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="pragma" content="no-cache" /> -->
         <!-- LIGNE 15 ET 16 A ENLEVER AVANT DE COMMENCER PHP -->
 
         <link rel="stylesheet" href="./css/style.css">
@@ -32,34 +37,51 @@
         </header>
 
         <main class="form">
+            <?php
+                $check = $bdd->prepare('SELECT * FROM utilisateurs WHERE email = ?');
+                $check -> execute(array($_SESSION['email']));
+                $data = $check->fetch();
+            ?>
             <h1>informations personnelles</h1>
             <form class="form-user" action="/formulaire.php" method="post">
                 <div class="border-right">
                     <div>
-                        <label for="fname">nom</label><br>
-                        <input type="text" id="fname" value=""><hr class="form-hr">
+                        <label for="pseudo">pseudo</label><br>
+                        <input type="text" id="pseudo" value="<?php echo $data['pseudo']; ?>"><hr class="form-hr">
                     </div>
                     <div>
-                        <label for="lname">prenom</label><br>
-                        <input type="text" id="lname" value=""><hr class="form-hr">
+                        <label for="pass">mot de passe</label><br>
+                        <input type="text" id="pass" value=""><hr class="form-hr">
                     </div>
                     <div>
                         <label for="email">adresse email</label><br>
-                        <input type="email" id="email" value="">
+                        <input type="email" id="email" value="<?php echo $data['email']; ?>"><hr class="form-hr">
+                    </div>
+                    <div>
+                        <label for="phone">téléphone</label><br>
+                        <input type="tel" id="phone" value="<?php echo $data['phone']; ?>">
                     </div>
                 </div>
                 <div class="margin-left">
                     <div>
-                        <label for="adress-postal">adresse postale</label><br>
-                        <input type="text" id="adress-postal" value=""><hr class="form-hr">
+                        <label for="lname">nom</label><br>
+                        <input type="text" id="lname" value="<?php echo $data['lname']; ?>"><hr class="form-hr">
+                    </div>
+                    <div>
+                        <label for="fname">prenom</label><br>
+                        <input type="text" id="fname" value="<?php echo $data['fname']; ?>"><hr class="form-hr">
+                    </div>
+                    <div>
+                        <label for="adress">adresse postale</label><br>
+                        <input type="text" id="adress" value="<?php echo $data['adress']; ?>"><hr class="form-hr">
                     </div>
                     <div>
                         <label for="departement">département</label><br>
-                        <input type="number" id="departement" value=""><hr class="form-hr">
+                        <input type="number" id="departement" value="<?php echo $data['departement']; ?>"><hr class="form-hr">
                     </div>
                     <div>
                         <label for="country">pays</label><br>
-                        <input type="text" id="country"value="">
+                        <input type="text" id="country"value="<?php echo $data['country']; ?>">
                     </div>
                 </div>
                 <button class="submit-user" type="submit">Envoyer</button>

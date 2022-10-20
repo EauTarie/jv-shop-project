@@ -23,6 +23,7 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
             if($data['password'] === $password)
             {
                 $_SESSION['user'] = $data['pseudo'];
+                $_SESSION['email'] = $data['email'];
                 header('Location: landing.php');
             } else header('Location: log-in.php?login_err=password');
         } else header('Location: log-in.php?login_err=email');
