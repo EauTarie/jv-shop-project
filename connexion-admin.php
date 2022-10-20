@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once 'config.php';
 
 echo $_POST['email']. $_POST['password'];

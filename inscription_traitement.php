@@ -7,7 +7,7 @@ if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['passwor
     $email = htmlspecialchars($_POST['email']);
     $password = htmlspecialchars($_POST['password']);
     $password_retype = htmlspecialchars($_POST['password_retype']);
-    $check = $bdd->prepare('SELECT pseudo, email, password FROM utilisateurs WHERE email = ?');
+    $check = $bdd->prepare('SELECT pseudo, email, pass FROM utilisateurs WHERE email = ?');
     $check->execute(array($email));
     $data = $check->fetch();
     $row = $check->rowCount();
@@ -25,11 +25,11 @@ if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['passwor
                     {
                         $password = hash('sha256', $password);
                         $ip = $_SERVER['REMOTE_ADDR'];
-                        $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, password) VALUES(:pseudo,:email,:password)');
+                        $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, pass) VALUES (:pseudo,:email,:pass)');
                         $insert->execute(array(
                             'pseudo' => $pseudo,
                             'email' => $email,
-                            'password' => $password   
+                            'pass' => $password   
                         ));
                         header('Location: inscription.php?reg_err=success');
                     } else {header('Location: inscription.php?reg_err=password');die();}

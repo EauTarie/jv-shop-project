@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once 'config.php';
 
 
@@ -9,7 +8,7 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
     $password=htmlspecialchars($_POST['password']);
 
     $email = strtolower($email);
-    $check=$bdd->prepare('SELECT pseudo, email, password FROM utilisateurs WHERE email = ?');
+    $check=$bdd->prepare('SELECT id, pseudo, email, pass FROM utilisateurs WHERE email = ?');
     $check->execute(array($email));
     $data = $check->fetch();
     $row = $check->rowCount();
@@ -20,10 +19,11 @@ if(!empty($_POST['email']) && !empty($_POST['password']))
         {
             $password =hash('sha256', $password);
 
-            if($data['password'] === $password)
+            if($data['pass'] === $password)
             {
                 $_SESSION['user'] = $data['pseudo'];
                 $_SESSION['email'] = $data['email'];
+                $_SESSION['id'] = $data['id'];
                 header('Location: landing.php');
             } else header('Location: log-in.php?login_err=password');
         } else header('Location: log-in.php?login_err=email');

@@ -1,11 +1,8 @@
 <?php
     require_once 'config.php';
-    session_start();
     if(!isset($_SESSION['user'])) {
         header('Location:log-in.php');
     }
-    echo $_SESSION['user']; // A SUPPRIMER APRES TEST
-    echo $_SESSION['email']; // A SUPPRIMER APRES TEST
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -43,45 +40,41 @@
                 $data = $check->fetch();
             ?>
             <h1>informations personnelles</h1>
-            <form class="form-user" action="/formulaire.php" method="post">
+            <form class="form-user" action="formulaire_traitement.php" method="post">
                 <div class="border-right">
                     <div>
                         <label for="pseudo">pseudo</label><br>
-                        <input type="text" id="pseudo" value="<?php echo $data['pseudo']; ?>"><hr class="form-hr">
-                    </div>
-                    <div>
-                        <label for="pass">mot de passe</label><br>
-                        <input type="text" id="pass" value=""><hr class="form-hr">
+                        <input type="text" name="pseudo" id="pseudo" value="<?php echo $data['pseudo']; ?>"><hr class="form-hr">
                     </div>
                     <div>
                         <label for="email">adresse email</label><br>
-                        <input type="email" id="email" value="<?php echo $data['email']; ?>"><hr class="form-hr">
+                        <input type="email" name="email" id="email" value="<?php echo $data['email']; ?>"><hr class="form-hr">
                     </div>
                     <div>
                         <label for="phone">téléphone</label><br>
-                        <input type="tel" id="phone" value="<?php echo $data['phone']; ?>">
+                        <input type="tel" name="phone" id="phone" value="<?php echo $data['phone']; ?>"><hr class="form-hr">
+                    </div>
+                    <div>
+                        <label for="lname">nom</label><br>
+                        <input type="text" name="lname" id="lname" value="<?php echo $data['lname']; ?>">
                     </div>
                 </div>
                 <div class="margin-left">
                     <div>
-                        <label for="lname">nom</label><br>
-                        <input type="text" id="lname" value="<?php echo $data['lname']; ?>"><hr class="form-hr">
-                    </div>
-                    <div>
                         <label for="fname">prenom</label><br>
-                        <input type="text" id="fname" value="<?php echo $data['fname']; ?>"><hr class="form-hr">
+                        <input type="text" name="fname" id="fname" value="<?php echo $data['fname']; ?>"><hr class="form-hr">
                     </div>
                     <div>
                         <label for="adress">adresse postale</label><br>
-                        <input type="text" id="adress" value="<?php echo $data['adress']; ?>"><hr class="form-hr">
+                        <input type="text" name="adress" id="adress" value="<?php echo $data['adress']; ?>"><hr class="form-hr">
                     </div>
                     <div>
                         <label for="departement">département</label><br>
-                        <input type="number" id="departement" value="<?php echo $data['departement']; ?>"><hr class="form-hr">
+                        <input type="number" name="departement" id="departement" value="<?php echo $data['departement']; ?>"><hr class="form-hr">
                     </div>
                     <div>
                         <label for="country">pays</label><br>
-                        <input type="text" id="country"value="<?php echo $data['country']; ?>">
+                        <input type="text" name="country" id="country" value="<?php echo $data['country']; ?>">
                     </div>
                 </div>
                 <button class="submit-user" type="submit">Envoyer</button>
@@ -94,11 +87,15 @@
             <h1>adresse de livraison</h1>
             <button class="add-button" type="add-adress">ajouter une adresse de livraison</button>
             <div class="adress-wrapper">
-                <img class="truck" src="/assets/truck.svg" alt="camion">
-                <p>adresse de livraison</p>
-                <?php
-
-                ?>
+                <div class="delivery">
+                    <img class="truck" src="/assets/truck.svg" alt="camion">
+                    <p>adresse de livraison</p>
+                </div>
+                <div>
+                    <?php
+                        echo "<p>" . $data['adress']. " " . $data['departement']. " " . $data['country']. "</p>";
+                    ?>
+                </div>
             </div>
             <hr class="form-hr">
             <div class="adress-wrapper">

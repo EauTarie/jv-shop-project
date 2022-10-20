@@ -6,3 +6,5 @@
     {
         die('Erreur'.$e->getMessage());
     }
+
+    session_start();
