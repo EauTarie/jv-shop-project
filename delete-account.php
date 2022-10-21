@@ -46,7 +46,7 @@
                         <input type="text" name="email" id="email" value="" required="required"><hr class="form-hr">
                     </div>
                     <div>
-                        <label for="email-retype">Re-tapez votre adresse email</label><br>
+                        <label for="email-retype">Saisissez à nouveau votre adresse email</label><br>
                         <input type="text" name="email-retype" id="email-retype" value="" required="required"><hr class="form-hr">
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                         <input type="password" name="password" id="password" value="" required="required"><hr class="form-hr">
                     </div>
                     <div>
-                        <label for="password-retype">Re-taper votre mot de passe</label><br>
+                        <label for="password-retype">Saisissez à nouveau votre mot de passe</label><br>
                         <input type="password" name="password-retype" id="password-retype" value="" required="required"><hr class="form-hr">
                     </div>
                 </div>

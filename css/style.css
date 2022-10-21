@@ -21,8 +21,8 @@ div.sealion img{
 }
 
 @keyframes sealion {
-    from {transform:translate(100vh); visibility: visible;}
-    to {transform:translate(-400vh);}
+    from {transform:translate(-400vh); visibility: visible;}
+    to {transform:translate(100vh);}
   }
 
 * {
