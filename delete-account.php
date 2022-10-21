@@ -27,13 +27,16 @@
         <title>Delete Account - Retrogame</title>
     </head>
 
-    <body class="index admin account">
+    <body class="index admin account sealion">
+        <div class="sealion">
+            <img src="/assets/sea_lion.png"
+             alt="UNE SUPER OTARIE QUI SURF YOUPI, j'peux avoir mon ecf stp Jérémy ?">
+        </div>
     <header>
             <?php
                 include './php/header.php';
             ?>
         </header>
-
         <main class="form">
             <h1>Suppression de compte</h1>
             <form class="form-user" action="delete_account_traitement.php" method="post">
@@ -57,18 +60,16 @@
                         <input type="password" name="password-retype" id="password-retype" value="" required="required"><hr class="form-hr">
                     </div>
                 </div>
-                <div>
-                    <label for="delete-confirm">Confirmez-vous la suppression de votre compte ?<br>
+                <div class="checkbox">
+                    <label class="checkbox" for="delete-confirm">Confirmez-vous la suppression de votre compte ?<br>
                     <span class="warning"> 
-                        <span class="color-red">
-                            Atttention !
-                        </span> 
-                        Cette action est irreversible.
+                        <span class="color-red">Attention &#33;</span> 
+                    Cette action est irreversible.
                     </span>
                     </label>
                     <input type="checkbox" name="delete-confirm" id="delete-confirm" required="required">
                 </div>
-                <button class="return bigger" type="submit">Supprimer le compte</button>
+                <button class="return bigger submit-user" type="submit">Supprimer le compte</button>
             </form>
         </main>
         <footer class="desktop">
