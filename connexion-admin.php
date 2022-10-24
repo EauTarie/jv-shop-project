@@ -1,7 +1,6 @@
 <?php
 require_once 'config.php';
 
-echo $_POST['email']. $_POST['password'];
 if(!empty($_POST['email']) && !empty($_POST['password']))
 {
     $email=htmlspecialchars($_POST['email']);
