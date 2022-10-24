@@ -40,7 +40,7 @@ require '_header.php';
                     <a href="description.php?id=<?php echo $product->id; ?>">
                         <img src="/panier/<?php echo $product->id; ?>.jpg" alt="Miniature du produit">
                     </a>
-                    <a href="description.php?id=<?php echo $product->id; ?>" class="product-price"><?php echo number_format($product->price,2,","," ").' €'; ?></a>
+                    <a class="cost" href="description.php?id=<?php echo $product->id; ?>" class="product-price"><?php echo number_format($product->price,2,","," ").' €'; ?></a>
                     <div class="panier">
                         <a class="btn-addpanier" href="addpanier.php?id=<?php echo $product->id; ?>">
                             <img class="img-addpanier" src="/assets/panier.png" alt="Bouton Ajouter <?php echo $product->title ?> au panier">
