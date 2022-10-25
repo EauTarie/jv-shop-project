@@ -797,3 +797,31 @@ img.icon {
         display:block;
     }
 }
+
+
+@media (max-width: 1000px) {
+    div.big-wrapper {
+        width:50%;
+        margin:0 auto;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .hidden-mobile {
+        display:none;
+    }
+    
+    div.big-wrapper {
+        width:initial;
+    }
+    
+    footer.mobile  img {
+        width:50px;
+        height:50px;
+    }
+    
+    footer.mobile p {
+        font-size:11px;
+    }
+}

@@ -3,7 +3,7 @@
                 <img class="logo" src="../assets/logo_banner.png" alt="retrogame">
             </a>
         </section>
-        <section>
+        <section class="hidden-mobile">
             <form action="post">
                 <input class="search" type="search" placeholder="Rechercher un titre, une description...">
             </form>
